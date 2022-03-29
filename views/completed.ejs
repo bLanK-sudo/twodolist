@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST APP</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' id='fontawesome-css' href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1'
+        type='text/css' media='all' />
+    <link rel="stylesheet" href="css/task.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="header">
+            <div class="left">
+                <img src="images/list.png" alt="brand-logo">
+                <a href="/me"><h1>TODOLIST</h1></a>
+            </div>
+            <div class="right">
+                    <a class="su" href="/me"><button><i class="far fa-check-circle clr"></i> Active Tasks</button></a>
+                    <a class="su" href="/done"><button><i class="fas fa-check-circle clr"></i> Completed Tasks</button></a>
+              
+                <form class="su" action="/signout" method="post"><button type="submit"><i class="fa fa-user"></i>
+                        Sign
+                        Out</button></form>
+
+            </div>
+        </nav>
+        <div class="welcome">
+            <div class="main-left">
+                <a href="/profile">
+                    <% if(avatar){ %>
+                        <img class="avat" src="data:image;base64, <%=avatar%>" alt="user-image">
+                    <% }else{ %>
+                        <i class="fa fa-user fa-6x"></i>
+                    <% } %> 
+                </a>
+                <h1>Welcome</h1>
+                <h1><%=user.name%></h1>
+            </div>
+            <div class="main-right">
+                <h1>Items</h1>
+                <h1 class="r2"><%=newListItems.length%></h1>
+                <h1>Left</h1>
+            </div>
+            <div class="labels-display">
+                <ul class="list-display">
+                    <%if (newListItems.length > 0) { %>
+                    <li class="list-label"><a href="/done">ALL</a></li>
+                    <% label.forEach(label => { %>
+                                <li class="list-label"><a href="?label=<%=label%>"><%=label%></a></li>
+                            <% }) %>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+        <div class="tasks">
+            <form action="/deleteAll" method="POST" class="delete-completed">
+                <button type="submit">
+                    <h3>Clear Completed Tasks</h3>
+                    <p>(remove from database)</p>
+                </button>
+            </form>
+            <ul>
+                <% newListItems.forEach(item => { %>
+                <div class="dsp list-item">
+                    <form action="/checked" method="POST" class="typs">
+                        <input type="hidden" name="taskId", value="<%=item._id%>">
+                        <input type="hidden" name="done", value="<%=item.completed%>">
+                        <% if(item.completed === true){ %>
+                            <button type="submit"><i class="fas fa-check-circle"></i></button>
+                        <% } else if(item.completed === false){ %>
+                            <button type="submit"><i class="far fa-check-circle"></i></i></button>   
+                        <% } %>
+                        <li><%=item.item%></i>
+                            <p class="lbs"><%=item.label%></p>
+                        </li>
+                    </form>
+                    <form action="/me/delete" method="post" style="align-self: center;">
+                    <input type="hidden" name="id" value="<%=item._id%>">
+                    <button value="<%=item._id%>" type="submit"><i class="fas fa-trash"></i></button>
+                    </form>
+                </div>
+                <% }) %>
+            </ul>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

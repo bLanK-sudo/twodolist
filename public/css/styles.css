@@ -1,0 +1,193 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    color: bisque;
+}
+
+body {
+    background: black;
+}
+
+.container {
+    padding: 20px;
+    margin: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.left h1 {
+    margin-top: 12px;
+    padding-left: 20px;
+    color: bisque;
+}
+
+.right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.si *,
+.su * {
+    padding: 20px;
+    color: bisque;
+}
+
+.su {
+    padding: 10px;
+    align-self: center;
+    text-align: center;
+    border: 1px solid bisque;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.su:hover {
+    background: bisque;
+}
+
+.su:hover>* {
+    color: black;
+}
+
+.content h1 {
+    text-align: center;
+}
+
+p.jonk {
+    text-align: CENTER;
+}
+
+p.down,
+p.down2 {
+    text-align: center;
+}
+
+.last {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+}
+
+.clr {
+    padding-right: 10px;
+    color: bisque;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bold:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    width: 120px;
+    padding-left: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    width: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: bisque;
+}
+
+a:focus {
+    outline: none;
+}
+
+.here {
+    text-decoration: underline;
+}
+.table {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: max-content;
+    margin: 20px;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+}
+
+.table * {
+    color: bisque;
+}
+
+.table h1,
+.table p {
+    text-align: center;
+}
+
+.form-container {
+    align-self: center;
+}
+
+input {
+    border: none;
+    padding-left: 10px;
+    width: 250px;
+    text-align: left;
+    background: none;
+}
+
+.email,
+.sub,
+.username,
+.pwd {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid bisque;
+    border-radius: 8px;
+    width: 300px;
+}
+
+.sub {
+    width: 322px;
+    cursor: pointer;
+    background: none;
+}
+
+.sub:hover {
+    background: bisque;
+    color: black;
+}
+
+input:focus {
+    outline: none;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #C58F5B;
+    border-radius: 10px;
+}

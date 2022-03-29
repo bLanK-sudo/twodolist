@@ -1,0 +1,18 @@
+<%- include('partials/header') -%>
+    
+        <main class="table">
+            <h1>Sign In</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, iure!</p>
+            <form action="/signin" method="post" class="form-container">
+                <div class="email"><i class="fas fa-envelope mgr"></i><input type="email" name="email" placeholder="Email" autocomplete="off"></div>
+                <div class="pwd"><i class="fas fa-lock"></i><input type="password" name="password" placeholder="Password" autocomplete="off"></div>
+                <button type="submit" class="sub">Sign In</button>
+            </form>
+            <p class="bottom">Don't have an account? <a href="/signup" class="bold">Sign Up</a></p>
+            <p><%=message%></p>
+        </main>
+    </div>
+
+
+
+<%- include('partials/footer') -%>

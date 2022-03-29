@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST APP</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' id='fontawesome-css' href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1' type='text/css' media='all' />
+    <link type="text/css" rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="header">
+            <div class="left">
+                <img src="images/list.png" alt="brand-logo">
+                <a href="/"><h1>TODOLIST</h1></a>
+            </div>
+        </nav>
+        <main class="table">
+            <h1>Change Credentials</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, iure!</p>
+            <form action="/change" method="post" class="form-container">
+                <div class="username"><i class="fas fa-user"></i><input type="text" name="name" value="<%=name%>" autocomplete="off"></div>
+                <div class="email"><i class="fas fa-envelope mgr"></i><input type="email" name="email" placeholder="Email" value="<%=email%>" autocomplete="off"></div>
+                <div class="pwd"><i class="fas fa-lock"></i><input type="password" name="password" placeholder="Password" autocomplete="off"></div>
+                <button type="submit" class="sub">Change</button>
+            </form>
+            <p class="bottom">(Must provide password)</p>
+            <p><%=message%></p>
+        </main>
+
+    </div>
+</body>
+</html>

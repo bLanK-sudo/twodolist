@@ -1,0 +1,274 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    color: bisque;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+body {
+    background: black;
+}
+
+.container {
+    padding: 20px;
+    margin: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+img {
+    width: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+}
+
+.left h1 {
+    margin-top: 12px;
+    padding-left: 20px;
+    color: bisque;
+}
+
+.welcome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 40px 70px 0 70px;
+    margin: 70px;
+    margin-top: 40px;
+    border: 1px solid bisque;
+    border-radius: 18px;
+}
+.labels-display{
+    grid-column: span 2;
+    width: fit-content;
+}
+.list-display{
+    display: flex;
+}
+.labels-display *{
+    font-size: 15px;
+}
+.list-label{
+    padding: 5px;
+    border: 1px solid bisque;
+    text-align: center;
+}
+.welcome h1 {
+    margin: 0;
+    margin-left: 0;
+}
+
+.main-left {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-self: flex-start;
+}
+
+.main-left a {
+    grid-row: span 2;
+}
+
+.main-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-self: flex-end;
+}
+.right{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.su{
+    padding: 10px 20px 10px 20px;
+    align-self: center;
+    text-align: center;
+    border: 1px solid bisque;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.su:hover{
+    background: bisque;
+}
+.su:hover *{
+    color: black;
+}
+
+.r2 {
+    grid-row: span 2;
+    font-size: 80px;
+    padding-left: 20px;
+}
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+li {
+    list-style: none;
+    font-size: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.lbs{
+    margin: 0;
+    padding: 10px;
+    padding-left: 0;
+    font-size: 13px;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+}
+.dsp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.typs{
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+}
+.fa-check-circle{
+    align-self: center;
+    font-size: 25px;
+}
+.clr{
+    font-size: 13px;
+}
+.list-item{
+    padding: 20px;
+    border:1px solid bisque;
+    margin: 10px;
+    border-radius: 18px;
+}
+.right{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.si{
+    padding: 10px 20px 10px 20px;
+    border:1px solid bisque;
+}
+i{
+    cursor: pointer;
+}
+.dsp .fa-trash {
+    align-self: center;
+}
+
+button {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+.crt {
+    margin-left: 70px;
+    display: none;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 20px;
+    border: 1px solid bisque;
+    width: min-content;
+    border-radius: 18px;
+}
+
+.ipt {
+    height: 30px;
+    width: 500px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid bisque;
+    margin-bottom: 20px;
+}
+
+.ipt:focus {
+    outline: none;
+}
+
+.but {
+    font-size:20px;
+    padding-left: 25px;
+    justify-self: flex-end;
+    align-self: flex-end;
+    cursor: pointer;
+}
+.create-task, .delete-completed{
+    padding: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 70px;
+    border:1px solid bisque;
+    width: max-content;
+    cursor: pointer;
+    border-radius: 18px;
+}
+.create-task:hover  {
+    background: bisque;
+    color: black;
+}
+.create-task:hover *{
+    background: bisque;
+    color: black;
+}
+.whole{
+    display: flex;
+    flex-direction: row;
+}
+.fa-times-circle{
+    padding-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.hidden{
+    display: none;
+}
+.visible{
+    display: inherit;
+}
+.visible-grid{
+    display: grid;
+}
+.avat{
+    width: 85px;
+    margin: 0;
+    border-radius: 18px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #C58F5B;
+    border-radius: 10px;
+}
+

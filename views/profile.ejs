@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST APP</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' id='fontawesome-css' href='https://use.fontawesome.com/releases/v5.0.1/css/all.css?ver=4.9.1'
+        type='text/css' media='all' />
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="header">
+            <div class="left">
+                <img src="/images/list.png" alt="brand-logo">
+                <a href="/me"><h1>TODOLIST</h1></a>
+            </div>
+            <div class="right">
+                <form style="background-color: red;"  class="su" action="/delete-user" method="post">
+                    <a  href="/done"><button><i class="fas fa-check-circle clr"></i> Delete User</button></a>
+                </form>
+                <form class="su" action="/signout" method="post"><button type="submit"><i class="fa fa-user clr"></i> Sign
+                        Out</button></form>
+
+            </div>
+        </nav>
+        <div class="profile-details">
+            <nav class="navbar-side">
+                <p>Profile Details</p>
+        </nav>
+        <div class="main-details">
+            <h1>PROFILE</h1>
+            <% if(avatar){ %>
+                <img class="avat" src="data:image;base64, <%=avatar%>" alt="user-image">
+            <% }else{ %>
+                <i style="margin-left: 50px;" class="fa fa-user fa-6x"></i>
+            <% } %>  
+            <form class="form-file" action="/avatar" method="post" enctype="multipart/form-data">
+                <label class="file">
+                    Upload
+                    <input type="file" name="avatar">
+                </label>
+                    
+                (Under 1mb)
+                <button class="sub" type="submit">Submit</button>
+                
+            </form>
+            <h3>Name : <%=name%></h3>
+            <h3>Email : <%=email%></h3>
+            <h3><a style="text-decoration: underline;" href="/change">Change Credentials</a></h3>
+
+            
+            <p><%=message%></p>
+        </div>
+        
+        </div>
+        </div>
+    
+</body>
+</html>
